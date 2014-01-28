@@ -36,8 +36,8 @@
           <div class="container">
             <div class="carousel-caption">
             <p>Cloud Inc Deployment Services</p>
-             <h1>Your Business. Your Client. One Platform.</h1> 
-              <p>Help Us, Help You.</p>
+             <h1>Your business. Your client. One platform.</h1> 
+              <p>Help us, Help you.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Partner Signup »</a></p>
             </div>
           </div>
@@ -50,7 +50,8 @@
     
     
     
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+   <div id="sticky-anchor"></div>
+ <div class="navbar navbar-inverse navbar-static-top" role="navigation" id="sticky">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -73,6 +74,7 @@ in</A></LI></UL>
             </div>
           </div>
         </div>
+
         
         
         
@@ -89,7 +91,7 @@ in</A></LI></UL>
     <div class="row featurette">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="featurette-heading center">The Benefits of Partnering with Cloud Inc<span class="text-muted"></span></h2>
-           <p class="lead center">Awesome SharePoint Solutions is just the start.</p>
+           <h3 class="center">Awesome SharePoint Solutions is just the start.</h3>
            <p class="center">The Cloud Inc Partner Program allows you to maximise your Office 365 profit. Help your customers move their whole business to the Cloud including their files and not just email. </p>
         </div>
       </div>
@@ -143,7 +145,7 @@ in</A></LI></UL>
       <div class="row featurette">
         <div class="col-md-12 col-sm-12">
           <h2 class="featurette-heading center">How it works<span class="text-muted"></span></h2>
-           <p class="lead center">Learn how Cloud Inc deployment services will take your business to the next level.</p>
+           <p class="center">Learn how Cloud Inc deployment services will take your business to the next level.</p>
         </div>
       </div>
 
@@ -204,7 +206,7 @@ in</A></LI></UL>
         <div class="row featurette">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="featurette-heading center">Getting Started<span class="text-muted"></span></h2>
-<p class="lead center"> If you want to find out more about this great opportunity, check out the options below.</p>
+<p class="center"> If you want to find out more about this great opportunity, check out the options below.</p>
         </div>
       </div>
 
@@ -293,5 +295,26 @@ href="http://127.0.0.1:81/Dashboard/Partners">Blog</A><BR></DIV></DIV>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/holder.js"></script>
+    
+    <script>
+function sticky_relocate() {
+  var window_top = $(window).scrollTop();
+  var div_top = $('#sticky-anchor').offset().top;
+  if (window_top > div_top) {
+    $('#sticky').addClass('stick');
+  } else {
+    $('#sticky').removeClass('stick');
+  }
+}
+
+$(function() {
+  $(window).scroll(sticky_relocate);
+  sticky_relocate();
+});
+</script>
+
+    
+    
+    
   </body>
 </html>
