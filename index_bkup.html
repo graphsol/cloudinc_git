@@ -52,8 +52,8 @@ Partner with us today.</p>
     
     
     
-<div id="sticky-anchor"></div>
- <div class="navbar navbar-inverse navbar-static-top" role="navigation" id="sticky">
+
+ <div class="navbar navbar-inverse navbar-static-top affix" role="navigation" data-spy="affix" data-offset-top="650" id="nav">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -257,22 +257,23 @@ href="http://127.0.0.1:81/Dashboard/Partners">Blog</A><BR></DIV></DIV>
     <script src="dist/js/holder.js"></script>
 
 
-<script>
-function sticky_relocate() {
-  var window_top = $(window).scrollTop();
-  var div_top = $('#sticky-anchor').offset().top;
-  if (window_top > div_top) {
-    $('#sticky').addClass('stick');
-  } else {
-    $('#sticky').removeClass('stick');
-  }
-}
+    <script type="text/javascript">
 
-$(function() {
-  $(window).scroll(sticky_relocate);
-  sticky_relocate();
-});
-</script>
+    $(document).ready(function(){
+
+        $("#myNav").affix({
+
+            offset: { 
+
+                top: 650 
+
+            }
+
+        });
+
+    });
+
+    </script>
 
 
     
